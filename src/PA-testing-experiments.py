@@ -201,7 +201,7 @@ def gen_figure_1() -> None:
             ax.add_artist(mechanism_legend)
             ax.add_artist(severity_legend)
 
-        filename = "../output/1a.pdf" if is_small_market else "../output/1b.pdf"
+        filename = "output/1a.pdf" if is_small_market else "output/1b.pdf"
         save_pdf(fig, filename)
 
 
@@ -248,7 +248,7 @@ def gen_figure_2() -> None:
     ax.set_xlabel(r"Sample size $n$")
     ax.set_ylabel(r"$\min(E, 50)$")
     ax.set_ylim(0, 51)
-    save_pdf(fig, "../output/2.pdf")
+    save_pdf(fig, "output/2.pdf")
 
 
 # -----------------------------------------------------------------------------
@@ -600,12 +600,12 @@ def gen_figure_3() -> None:
     top_terminal = forward_distribution(top_strategy, top_stop, top_grid, TOP_THETA, 5.0)
     check_probabilities("top terminal distribution", np.array([p for _, _, p in top_terminal]))
 
-    save_panel_3a(Path("../output/3a.pdf"), top_terminal)
-    save_panel_3b(Path("../output/3b.pdf"), top_terminal)
+    save_panel_3a(Path("output/3a.pdf"), top_terminal)
+    save_panel_3b(Path("output/3b.pdf"), top_terminal)
 
     curves = compute_profit_curves()
-    save_profit_panel(Path("../output/3c.pdf"), 1.0, curves[1.0], "(c)")
-    save_profit_panel(Path("../output/3d.pdf"), 5.0, curves[5.0], "(d)")
+    save_profit_panel(Path("output/3c.pdf"), 1.0, curves[1.0], "(c)")
+    save_profit_panel(Path("output/3d.pdf"), 5.0, curves[5.0], "(d)")
 
 
 if __name__ == "__main__":
