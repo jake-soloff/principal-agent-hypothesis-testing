@@ -2,7 +2,7 @@
 
 This repository contains code to reproduce the numerical results in:
 
-> Stephen Bates, Michael I. Jordan, Michael Sklar, and Jake A. Soloff. "Principal-Agent Hypothesis Testing." ([arXiv:2205.06812](https://arxiv.org/abs/2205.06812))
+> "Principal-Agent Hypothesis Testing." 
 
 ## Usage
 
